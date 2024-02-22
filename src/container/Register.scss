@@ -1,0 +1,90 @@
+$lightGreen: #b9e7e7;
+
+.register-container {
+    background-color: teal;
+    height          : 100vh;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    color           : teal;
+
+    form {
+        display         : flex;
+        flex-direction  : column;
+        gap             : 8px;
+        width           : 180px;
+        height          : max-content;
+        padding         : 10px 20px;
+        background-color: white;
+
+        h1.form-title {
+            margin       : 0;
+            text-align   : center;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            height: 100%;
+
+            .form-input {
+                box-sizing: border-box;
+                width     : 100%;
+                padding   : 5px 5px;
+                outline   : none;
+                border    : 1px solid $lightGreen;
+                color     : teal;
+
+                &:focus {
+                    border: 1px solid teal;
+                }
+            }
+        }
+
+        p {
+            margin    : 0;
+            font-size : 11px;
+            color     : red;
+            margin-top: -8px;
+        }
+
+        button {
+            padding         : 5px 0;
+            background-color: white;
+            border          : 1px solid $lightGreen;
+            color           : teal;
+
+            &:hover {
+                background-color: teal;
+                color           : white;
+                border          : 1px solid white;
+            }
+
+            &:active {
+                transform       : scale(0.96);
+                transform-origin: center;
+            }
+        }
+
+        .dont-have-account {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            text-align     : center;
+            font-size      : 11px;
+            user-select    : none;
+
+            .navigate-to-register {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:active {
+                    transform       : scale(0.96);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+}

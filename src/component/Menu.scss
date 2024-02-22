@@ -1,0 +1,57 @@
+$lightGreen: #b9e7e7;
+
+.menu-container {
+    display       : flex;
+    flex-direction: column;
+    gap           : 15px;
+
+    h1 {
+        font-size: 14px;
+        margin   : 0;
+    }
+
+    .posts {
+        display       : flex;
+        flex-direction: column;
+        gap           : 20px;
+
+        .post-image {
+            width : 100%;
+            height: 130px;
+
+            img {
+                width     : 100%;
+                height    : 100%;
+                object-fit: cover;
+                overflow  : hidden;
+            }
+        }
+
+        .post-content {
+            display       : flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: 13px;
+            }
+
+            button {
+                border          : 1px solid $lightGreen;
+                color           : teal;
+                background-color: white;
+                padding         : 4px 0;
+
+                &:hover {
+                    background-color: teal;
+                    color           : white;
+                    border          : 1px solid white;
+                }
+
+                &:active {
+                    transform       : scale(0.94);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+}

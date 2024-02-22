@@ -1,0 +1,123 @@
+$lightGreen: #b9e7e7;
+
+.header-background {
+    background-color   : $lightGreen;
+    height             : 50px;
+    // width           : 100vw;
+}
+
+.header-container {
+    padding    : 0 100px;
+    display    : flex;
+    align-items: center;
+    height     : inherit;
+
+    .header-logo {
+        flex       : 1;
+        font-size  : 22px;
+        font-weight: bolder;
+        color      : teal;
+        cursor     : pointer;
+
+        &:active {
+            transform       : scale(0.94);
+            transform-origin: center;
+        }
+    }
+
+    .header-nav {
+        flex           : 3;
+        display        : flex;
+        align-items    : center;
+        justify-content: right;
+        height         : 100%;
+
+        .nav-child {
+            // padding         : 10px;
+            // background-color: red;
+            height     : 100%;
+            display    : flex;
+            align-items: center;
+            padding    : 0 14px;
+            font-weight: bold;
+            color      : teal;
+            cursor     : pointer;
+            user-select: none;
+
+            &.active {
+                background-color: teal;
+                color           : white;
+            }
+        }
+    }
+
+    .header-user {
+        flex           : 1;
+        display        : flex;
+        align-items    : center;
+        gap            : 5px;
+        justify-content: right;
+        min-width      : 150px;
+
+        .image {
+            flex-shrink     : 0;
+            height          : 35px;
+            background-color: white;
+            width           : 35px;
+            border-radius   : 50%;
+            cursor          : pointer;
+        }
+
+        .username {
+            cursor       : pointer;
+            overflow     : hidden;
+            white-space  : nowrap;
+            text-overflow: ellipsis;
+            width        : 60px;
+        }
+
+        .auth {
+            margin-right: 8px;
+            cursor      : pointer;
+
+            &:active {
+                transform       : scale(0.96);
+                transform-origin: center;
+            }
+        }
+    }
+
+    .header-write {
+        width          : 80px;
+        height         : 50px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        span {
+            display         : block;
+            width           : 35px;
+            height          : 35px;
+            border-radius   : 50%;
+            background-color: white;
+            padding         : 6px;
+            background-color: teal;
+            color           : $lightGreen;
+            font-weight     : 500;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            cursor          : pointer;
+
+            &:hover {
+                color           : black;
+                border          : 1px solid teal;
+                background-color: white;
+            }
+
+            &:active {
+                transform: scale(0.94);
+            }
+        }
+    }
+}

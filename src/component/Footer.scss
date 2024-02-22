@@ -1,0 +1,24 @@
+$lightGreen: #b9e7e7;
+
+.footer-container {
+    background-color: $lightGreen;
+    padding         : 0 100px;
+    height          : 50px;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    position        : fixed;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+
+    .footer-logo {
+        width      : max-content;
+        color      : teal;
+        font-size  : 22px;
+        font-weight: bold;
+        cursor     : pointer;
+    }
+
+    .footer-text {}
+}

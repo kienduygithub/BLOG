@@ -1,0 +1,79 @@
+$lightGreen: #b9e7e7;
+
+.home-container {
+    padding   : 0 100px;
+    margin-top: 30px;
+
+    .posts {
+        display       : flex;
+        flex-direction: column;
+        gap           : 50px;
+        margin-bottom : 100px;
+
+        .post-info {
+            &:nth-child(2n + 1) {
+                display       : flex;
+                flex-direction: row-reverse;
+            }
+
+            display: flex;
+            gap    : 100px;
+
+            .post-image {
+                // flex: 2;
+                position         : relative;
+                background-size  : 100% 100%;
+                background-repeat: no-repeat;
+                width            : 200px;
+                min-height       : 250px;
+                max-height       : 300px;
+
+                &::after {
+                    content         : "";
+                    width           : 200px;
+                    height          : 100%;
+                    background-color: $lightGreen;
+                    position        : absolute;
+                    z-index         : -1;
+                    left            : -12px;
+                    top             : 12px;
+                }
+            }
+
+            .post-content {
+                flex          : 1;
+                display       : flex;
+                flex-direction: column;
+
+                h1.post-title {
+                    margin   : 0;
+                    font-size: 20px;
+                    cursor   : pointer;
+                }
+
+                .post-desc {
+                    // text-align: justify;
+                    font-size: 15px;
+                }
+
+                button.btn-more {
+                    width              : 150px;
+                    padding            : 5px 0;
+                    border-radius      : 2px;
+                    border             : 1px solid $lightGreen;
+                    background-color   : white;
+                    color              : teal;
+                    // margin-top      : auto;
+                    margin-right       : auto;
+                    cursor             : pointer;
+
+                    &:hover {
+                        background-color: teal;
+                        color           : white;
+                        border          : 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
